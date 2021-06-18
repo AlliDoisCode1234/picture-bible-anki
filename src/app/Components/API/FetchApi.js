@@ -59,7 +59,26 @@ const FetchApi = () => {
                 data.data.forEach(Obj => {
                     allArr.push(Obj)
                 })
-                console.log(allArr)
+                // console.log(allArr)
+
+                const biblesHashMap = {}
+
+                data.data.forEach((item)=> {
+                    let leftChar = item.id;
+                    let rightChar = item.name;
+
+                    biblesHashMap[rightChar] = leftChar;
+
+                    // const displayBibles =  biblesHashMap.map((bible)=> 
+                    //     <option value={leftChar}>{rightChar}</option>
+                    // )
+                })
+
+                console.log(biblesHashMap)
+
+                
+                
+                
                 
              
             
@@ -79,12 +98,14 @@ const FetchApi = () => {
         <div className="fetchApi">
             <button onClick={apiGet}>Fetch API</button>
            
+          
             <select onChange={handleBibleChange}>
                 {/* Creating the default / starting option for dropdown */}
                 <option value="⬇️ Select Bible Version ⬇️"> -- Select a Bible Version -- </option>
-
+                
+                
                 {/* Mapping through json object */}
-                {/* <h1>{data}</h1>
+                {/* <h1>{data.data}</h1>
                 {
                     data && data.length>0 && data.map((item)=><p>{item.about}</p>)
                 } */}
