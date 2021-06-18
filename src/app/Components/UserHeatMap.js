@@ -99,13 +99,14 @@ const UserHeatMap = () => {
   });
     return (
         <div className="userHeatMap">
-            <button>Choose Color</button>
-            <>
-                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} />
-                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(220, 5,  3, ${alpha})`} />
-                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(5, 5,  200, ${alpha})`} />
-            </>
-  )
+            <div className="userHeatMap__container">
+                <> 
+                    {/* <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} />
+                    <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(220, 5,  3, ${alpha})`} />
+                    <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(5, 5,  200, ${alpha})`} /> */}
+                    <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(171, 221, 216, ${alpha})`} />
+                </>
+            </div>
         </div>
     )
 }

@@ -79,7 +79,7 @@ const FetchApi = () => {
 
                 console.log(biblesHashMap)
 
-                Object.entries(biblesHashMap).map(([key, value])=> {
+                const bibles = Object.entries(biblesHashMap).map(([key, value])=> {
                     return (
                         <div>{key} : {value.toString()}</div>
                     )
