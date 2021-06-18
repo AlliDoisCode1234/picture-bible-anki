@@ -4,7 +4,7 @@
 .userHeatMap__container {
   height: 214px;
   width: 930px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   border: 1px solid rgba(93, 108, 137, 0.3);
   border-radius: 15px 15px 0 0;
 }

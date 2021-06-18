@@ -3,6 +3,10 @@ import './UserProfile.css'
 import Header from './Header'
 import UserPictureBible from './UserPictureBible'
 import UserHeatMap from './UserHeatMap'
+import UserFeed from './UserFeed'
+import Decks from './Decks'
+import Footer from './Footer'
+
 
 const UserProfile = () => {
     return (
@@ -16,10 +20,13 @@ const UserProfile = () => {
             <UserHeatMap />
             {/* Contribution/Anki Study Heatmap */}
 
+            <UserFeed />
             {/* User Wall Shows Infinite Scroll of user most recent cards created */}
 
+            <Decks />
             {/* User Decks like sidebar */}
 
+            <Footer />
             {/* Footer */}
 
         </div>

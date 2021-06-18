@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import { setUserBibleVersionId, selectUserBibleVersionId} from '../../../features/userSlice'
-import { useSelector } from 'react-redux'
+// import ReactDOM from 'react-dom';
+// import { setUserBibleVersionId, selectUserBibleVersionId} from '../../../features/userSlice'
+// import { useSelector } from 'react-redux'
 // import Axios from 'axios'
 
 // const accessToken = '2e5d71a91294792ed187ecf7c3645b31';
@@ -40,14 +40,14 @@ const FetchApi = () => {
     // const userBibleVersionId = useSelector(selectUserBibleVersionId)
 
 
-    const handleBibleChange = (event) => {
-        setUserBibleVersionId(event.target.value)
-    }
+    // const handleBibleChange = (event) => {
+    //     // setUserBibleVersionId(event.target.value)
+    // }
 
 
 
 
-    const apiGet = () => {
+    // const apiGet = () => {
         fetch("https://api.scripture.api.bible/v1/bibles", {
             method: 'get',
             headers: { 'accept': 'application/json', 'api-key': '2e5d71a91294792ed187ecf7c3645b31'
@@ -58,10 +58,10 @@ const FetchApi = () => {
                 
                 console.log(data)
                 // console.log(data.data[0])
-                let allArr = [];
-                data.data.forEach(Obj => {
-                    allArr.push(Obj)
-                })
+                // let allArr = [];
+                // data.data.forEach(Obj => {
+                //     allArr.push(Obj)
+                // })
                 // console.log(allArr)
 
                 const biblesHashMap = {}
@@ -79,10 +79,32 @@ const FetchApi = () => {
 
                 console.log(biblesHashMap)
 
-                const bibles = Object.entries(biblesHashMap).map(([key, value])=> {
+                    Object.entries(biblesHashMap).map(([key, value])=> {
+                    console.log(key)
+                    console.log(value)
                     return (
-                        <div>{key} : {value.toString()}</div>
+                        <div className="fetchApi">
+                            <button>Fetch API</button>
+                            {/* <div>{bibles}</div> */}
+          
+                            <select>
+                            {/* Creating the default / starting option for dropdown */}
+                            <option value="⬇️ Select Bible Version ⬇️"> -- Select a Bible Version -- </option>
+                            <option value={key}>{value}</option>
+                
+                            {/* Mapping through json object */}
+                                {/* <h1>{data.data}</h1>
+                            {
+                                 data && data.length>0 && data.map((item)=><p>{item.about}</p>)
+                                    } */}
+
+                            </select>
+                        </div>
+                        
+
                     )
+
+                    
                 })
                 
                 
@@ -105,25 +127,25 @@ const FetchApi = () => {
     
 
 
-    return (
-        <div className="fetchApi">
-            <button onClick={apiGet}>Fetch API</button>
-            {/* <div>{bibles}</div> */}
+    // return (
+        // <div className="fetchApi">
+        //     <button onClick={apiGet}>Fetch API</button>
+        //     {/* <div>{bibles}</div> */}
           
-            <select onChange={handleBibleChange}>
-                {/* Creating the default / starting option for dropdown */}
-                <option value="⬇️ Select Bible Version ⬇️"> -- Select a Bible Version -- </option>
+        //     <select onChange={handleBibleChange}>
+        //         {/* Creating the default / starting option for dropdown */}
+        //         <option value="⬇️ Select Bible Version ⬇️"> -- Select a Bible Version -- </option>
                 
                 
-                {/* Mapping through json object */}
-                {/* <h1>{data.data}</h1>
-                {
-                    data && data.length>0 && data.map((item)=><p>{item.about}</p>)
-                } */}
+        //         {/* Mapping through json object */}
+        //         {/* <h1>{data.data}</h1>
+        //         {
+        //             data && data.length>0 && data.map((item)=><p>{item.about}</p>)
+        //         } */}
 
-            </select>
-        </div>
-    )
-}
+        //     </select>
+        // </div>
+    // )
+// }
 
 export default FetchApi
