@@ -9,6 +9,8 @@ import { auth, provider } from './firebase'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { setActiveUser, setUserLogOutState, selectUserEmail, selectUserName } from './features/userSlice'
+import UserProfile from './app/Components/UserProfile';
+import SalesLanding from './app/Components/SalesLanding';
 
 function App() {
   const dispatch = useDispatch()
@@ -43,14 +45,7 @@ function App() {
     // BEM naming convention
     <Router>
       <div className="App">
-        {
-          userName ? (
-            
-            <button onClick={handleSignout} >Sign out</button>
-          ):(
-            <button onClick={handleSignin}>Sign in</button>
-          )
-        }
+        
         <Switch>
           <Route path="/home">
             <Home />
@@ -59,7 +54,22 @@ function App() {
             <Login />
           </Route>
           <Route path="/">
-            <Header />
+            {
+              userName ? (
+                
+                <button className="app__signOut" onClick={handleSignout} >Sign out</button>
+              ):(
+                <button className="app__signIn" onClick={handleSignin}>Sign in</button>
+              )
+            }
+            {
+              userName ? (
+                <UserProfile />
+              ): (
+                <SalesLanding />
+              )
+            }
+            
           </Route>
         </Switch>
       </div>
