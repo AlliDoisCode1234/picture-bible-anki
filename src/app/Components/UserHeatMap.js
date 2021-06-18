@@ -2,7 +2,6 @@ import React from 'react'
 import './UserHeatMap.css'
 import moment from 'moment'
 
-
 const DayNames = {
   1: 'Mon',
   3: 'Wed',
@@ -12,7 +11,7 @@ const DayNames = {
 function Cell({ color }) {
   let style = {
     backgroundColor: color
-  }; 
+  };
 
   return (
     <div className='timeline-cells-cell' style={style}></div>
@@ -87,10 +86,9 @@ function Timeline({ range, data, colorFunc }) {
   );
 }
 
-
 const UserHeatMap = () => {
-    // 1 year range
-  let startDate = moment().add(-365, 'days');
+
+    let startDate = moment().add(-365, 'days');
   let dateRange = [startDate, moment()];
 
   let data = Array.from(new Array(365)).map((_, index) => {
@@ -99,15 +97,17 @@ const UserHeatMap = () => {
       value: Math.floor(Math.random() * 100)
     };
   });
-
-  return (
-    <>
-      <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} />
-      <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(220, 5,  3, ${alpha})`} />
-      <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(5, 5,  200, ${alpha})`} />
-    </>
+    return (
+        <div className="userHeatMap">
+            <button>Choose Color</button>
+            <>
+                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} />
+                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(220, 5,  3, ${alpha})`} />
+                <Timeline range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(5, 5,  200, ${alpha})`} />
+            </>
   )
+        </div>
+    )
 }
 
-// ReactDOM.render(<UserHeatMap />, document.getElementById('container'));
 export default UserHeatMap

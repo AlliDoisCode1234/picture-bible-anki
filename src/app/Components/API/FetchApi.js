@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import { setUserBibleVersionId, selectUserBibleVersionId} from '../../../features/userSlice'
 import { useSelector } from 'react-redux'
 // import Axios from 'axios'
@@ -54,6 +55,8 @@ const FetchApi = () => {
         })
             .then((response) => response.json())
             .then((data) => {
+                
+                console.log(data)
                 // console.log(data.data[0])
                 let allArr = [];
                 data.data.forEach(Obj => {
@@ -76,7 +79,11 @@ const FetchApi = () => {
 
                 console.log(biblesHashMap)
 
-                
+                Object.entries(biblesHashMap).map(([key, value])=> {
+                    return (
+                        <div>{key} : {value.toString()}</div>
+                    )
+                })
                 
                 
                 
@@ -85,6 +92,8 @@ const FetchApi = () => {
             })
             .catch((err) => alert(err.message))
     }
+
+    // const getBibles = apiGet();
 
     
 
@@ -99,7 +108,7 @@ const FetchApi = () => {
     return (
         <div className="fetchApi">
             <button onClick={apiGet}>Fetch API</button>
-           
+            {/* <div>{bibles}</div> */}
           
             <select onChange={handleBibleChange}>
                 {/* Creating the default / starting option for dropdown */}

@@ -15,7 +15,7 @@ import UserProfile from './app/Components/UserProfile';
 import SalesLanding from './app/Components/SalesLanding';
 import Messages from './app/Components/Messages';
 import Decks from './app/Components/Decks';
-import UserPictureBible from './app/Components/UserPictureBible';
+
 
 function App() {
   const dispatch = useDispatch()
@@ -56,12 +56,14 @@ function App() {
             <Messages />
           </Route>
           <Route path="/decks">
+            <Header />
             <Decks />
           </Route>
           <Route path="/createCard">
             <CreateCard />
           </Route>
           <Route path="/home">
+            <Header />
             <Home />
           </Route>
           <Route path="/login">
@@ -70,8 +72,7 @@ function App() {
 
 
           <Route path="/">
-          <Header />
-          <UserPictureBible />
+            <UserProfile />
 
 
 
