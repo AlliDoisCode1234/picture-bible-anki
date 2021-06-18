@@ -86,6 +86,8 @@ const FetchApi = () => {
             .catch((err) => alert(err.message))
     }
 
+    
+
 
     // useEffect(()=> {
     //     const data = apiGet()

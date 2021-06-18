@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "firebase": "^8.6.8",
     "firebase-tools": "^9.13.1",
+    "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-axios": "^2.0.5",
     "react-dom": "^17.0.2",
