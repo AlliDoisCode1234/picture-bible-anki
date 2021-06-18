@@ -15,8 +15,6 @@ const FetchApi = () => {
 
     return (
         <div className="fetchApi">
-            <h1>My API</h1>
-
             <button onClick={apiGet}>Fetch API</button>
         </div>
     )

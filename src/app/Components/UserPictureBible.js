@@ -1,21 +1,17 @@
 import React from 'react'
 import './UserPictureBible.css'
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
+
+import FetchApi from '../Components/API/FetchApi';
 
 const UserPictureBible = () => {
 
-    const options = [
-        'one', 'two', 'three'
-    ];
-    const defaultOption = options[0];
+    
 
     return (
         <div className="userPictureBible">
             <div className="userPictureBible__InputContainer">
-                <h1>User Picture Bible that fills out each verse of the bible user has created a card for</h1>
-                <Dropdown options={options} value={defaultOption} placeholder="Select an option" />;
-
+                
+                <FetchApi />
                 {/* FetchApi API file for data to provide initially */}
                 {/* Pull verse completion data */}
                 {/* display user completion by highlighting verses after user clicks on book of bible dropdown */}

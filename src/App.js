@@ -5,7 +5,7 @@ import Home from './app/Components/Home'
 import Login from "./app/Components/Login"
 import Header from './app/Components/Header';
 import CreateCard from './app/Components/CreateCard'
-import FetchApi from './app/Components/API/FetchApi';
+
 
 import { auth, provider } from './firebase'
 
@@ -72,7 +72,6 @@ function App() {
           <Route path="/">
           <Header />
           <UserPictureBible />
-          <FetchApi />
 
 
 
