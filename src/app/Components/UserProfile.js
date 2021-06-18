@@ -1,6 +1,7 @@
 import React from 'react'
 import './UserProfile.css'
 import Header from './Header'
+import UserPictureBible from './UserPictureBible'
 
 const UserProfile = () => {
     return (
@@ -8,6 +9,7 @@ const UserProfile = () => {
 
             <Header />
             
+            <UserPictureBible />
             {/* Picture Bible Component (showcase userPictureBible with saved Verse Cards) */}
             
             {/* Contribution/Anki Study Heatmap */}

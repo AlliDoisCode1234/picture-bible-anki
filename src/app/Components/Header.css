@@ -6,11 +6,44 @@
   padding: 20px;
   object-fit: contain;
   display: flex;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #5d6c89;
   justify-content: space-between;
   z-index: 1;
 }
 .header__logoContainerImage {
   object-fit: contain;
-  width: 7%;
+  width: 9%;
+}
+
+.header__logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.5%;
+}
+
+.header__mainMenu {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+
+  color: #abddd8;
+}
+
+.header__mainMenuItemContainer {
+  padding: 7% 6% 0 6%;
+}
+
+.header__mainMenuItemContainer:hover {
+  background-color: #abddd857;
+  color: white;
+  border: 1px solid #abddd8;
+  border-radius: 15px;
+}
+
+.header__mainMenuItemContainerLink {
+  color: #abddd8;
+}
+
+.header__mainMenuItemContainerLink:hover {
+  color: #FEB06A;
 }

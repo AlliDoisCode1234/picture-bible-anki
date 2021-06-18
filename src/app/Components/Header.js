@@ -19,12 +19,24 @@ const Header = () => {
                       alt="app logo" 
                       className="header__logoContainerImage" 
                   />
-                </Link>
+            </Link>
             </div>
             <div className="header__mainMenu">
-                <AddIcon />
-                <LibraryBooksIcon />
-                <MessageIcon />
+                <div className="header__mainMenuItemContainer">
+                    <Link to="/createCard" className="header__mainMenuItemContainerLink">
+                        <AddIcon fontSize="large" />
+                    </Link>
+                </div>
+                <div className="header__mainMenuItemContainer">
+                    <Link to="/decks" className="header__mainMenuItemContainerLink">
+                        <LibraryBooksIcon fontSize="large" />
+                    </Link>
+                </div>
+                <div className="header__mainMenuItemContainer">
+                    <Link to="/messages" className="header__mainMenuItemContainerLink">
+                        <MessageIcon fontSize="large" />
+                    </Link>
+                </div>
             </div>
         </div>
     )

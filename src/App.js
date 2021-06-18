@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './app/Components/Home'
 import Login from "./app/Components/Login"
 import Header from './app/Components/Header';
+import CreateCard from './app/Components/CreateCard'
 
 import { auth, provider } from './firebase'
 
@@ -11,6 +12,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setActiveUser, setUserLogOutState, selectUserEmail, selectUserName } from './features/userSlice'
 import UserProfile from './app/Components/UserProfile';
 import SalesLanding from './app/Components/SalesLanding';
+import Messages from './app/Components/Messages';
+import Decks from './app/Components/Decks';
+import UserPictureBible from './app/Components/UserPictureBible';
 
 function App() {
   const dispatch = useDispatch()
@@ -47,6 +51,15 @@ function App() {
       <div className="App">
         
         <Switch>
+          <Route path="/messages">
+            <Messages />
+          </Route>
+          <Route path="/decks">
+            <Decks />
+          </Route>
+          <Route path="/createCard">
+            <CreateCard />
+          </Route>
           <Route path="/home">
             <Home />
           </Route>
@@ -54,6 +67,8 @@ function App() {
             <Login />
           </Route>
           <Route path="/">
+          <Header />
+          <UserPictureBible />
             {
               userName ? (
                 
