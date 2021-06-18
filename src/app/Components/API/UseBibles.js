@@ -11,6 +11,7 @@ const useBibles = () => {
     })
       .then((response) => response.json())
       .then((data) => {  
+          console.log(data)
         const biblesHashMap = data.data.reduce((hashMap, item) => {
           const leftChar = item.id;
           const rightChar = item.name;
@@ -18,6 +19,7 @@ const useBibles = () => {
           return hashMap;
         }, {});
         setBibles(biblesHashMap)
+        console.log(biblesHashMap)
       })
       .catch((err) => alert(err.message))
   }, []);

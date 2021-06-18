@@ -10,7 +10,7 @@ const bibleSlice = createSlice({
     reducers: {
         setBibleVersionId: (state, action) => {
             state.bibleVersionId = action.payload.bibleVersionId
-        }
+        },
     }
 });
 
