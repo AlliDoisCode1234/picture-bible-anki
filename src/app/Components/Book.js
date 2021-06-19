@@ -11,7 +11,7 @@ const Book = ({ bookName, chapters, verses }) => {
             <h2>{bookName}</h2>
             <form action="" className="book__form">
                 <label for={chapters}>Chapter:</label>
-                    <select name={bookName} id={bookName}>
+                    <select name={chapters} id={chapters}>
                         <option>1</option>
                         {/* {
                             chapters.map((item) => {

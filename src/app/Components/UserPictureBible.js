@@ -40,6 +40,16 @@ const UserPictureBible = () => {
                     chapters='50'
                     verses='31'
                 />
+                <Book 
+                    bookName="Exodus"
+                    chapters='50'
+                    verses='31'
+                />
+                <Book 
+                    bookName="Leviticus"
+                    chapters='50'
+                    verses='31'
+                />
                 {/* <label for="genesis">Genesis</label>
                   <select name="Genesis" id="genesis"> */}
                     
