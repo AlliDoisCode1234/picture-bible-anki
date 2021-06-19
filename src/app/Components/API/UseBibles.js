@@ -3,9 +3,9 @@ import React from 'react'
 
 const useBibles = () => {
   const [bibles, setBibles] = React.useState({});
-
+  
   const getBibles = React.useCallback(() => {
-    fetch("https://ajith-holy-bible.p.rapidapi.com/GetBooks", {
+    fetch("https://ajith-holy-bible.p.rapidapi.com/GetVerseOfaChapter", {
       method: 'get',
       headers: { 'x-rapidapi-key': '2cc83f283fmsh085ca9948622069p1f86ffjsn270a6e7aac00', 'x-rapidapi-host': 'ajith-holy-bible.p.rapidapi.com', 'useQueryString' : true }
     })

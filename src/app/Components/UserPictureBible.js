@@ -1,13 +1,13 @@
 import React from 'react'
 import './UserPictureBible.css'
-import useBibles from './API/UseBibles'
+// import useBibles from './API/UseBibles'
 // import useBooks from './API/UseBooks'
 
 
 // import FetchApi from '../Components/API/FetchApi';
 
 const UserPictureBible = () => {
-    const [bibles, getBibles] = useBibles();
+    // const [bibles, getBibles] = useBibles();
     // const [books, getBooks] = useBooks();
     
 
@@ -15,13 +15,13 @@ const UserPictureBible = () => {
         <div className="userPictureBible">
             <div className="userPictureBible__InputContainer">
             
-                <select onClick={getBibles}>
-                    {/* Creating the default / starting option for dropdown */}
+                {/* <select onClick={getBibles}>
+                    Creating the default / starting option for dropdown
                     <option value="⬇️ Select Bible Version ⬇️"> -- Select a Bible Version -- </option>
                     {Object.entries(bibles).map(([ rightChar, leftChar ]) => {
                         return <option value={leftChar}>{rightChar}</option>
                     })}
-                </select>
+                </select> */}
                 {/* <FetchApi /> */}
                 
                     {/* Creating the default / starting option for dropdown */}
