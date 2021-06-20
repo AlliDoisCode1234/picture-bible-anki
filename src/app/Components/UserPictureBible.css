@@ -1,6 +1,7 @@
 .userPictureBible {
   display: flex;
   width: 100%;
+  border: 1px solid black;
 }
 
 .userPictureBible__oldTestament {
@@ -15,4 +16,5 @@
   display: flex;
   width: 50%;
   flex-flow: row wrap;
+  border: 1px solid black;
 }
