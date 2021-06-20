@@ -34,7 +34,7 @@ const UserPictureBible = () => {
                 </select> */}
                 {/*  */}
 
-                
+                  
                 <Book
                     className="userPictureBible__book" 
                     bookName="Genesis"

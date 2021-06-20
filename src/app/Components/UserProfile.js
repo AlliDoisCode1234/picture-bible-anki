@@ -20,10 +20,12 @@ const UserProfile = () => {
             <UserHeatMap />
             {/* Contribution/Anki Study Heatmap */}
 
-            <UserFeed />
-            {/* User Wall Shows Infinite Scroll of user most recent cards created */}
+            <div className="userProfile__main">
+                <UserFeed />
+                {/* User Wall Shows Infinite Scroll of user most recent cards created */}
 
-            <Decks />
+                <Decks />
+            </div>
             {/* User Decks like sidebar */}
 
             <Footer />

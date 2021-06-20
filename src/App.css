@@ -3,6 +3,9 @@
   padding: 0;
   border: none;
 }
+li {
+  list-style: none;
+}
 .app {
   display: flex;
 }
