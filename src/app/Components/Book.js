@@ -12,7 +12,7 @@ const Book = ({ key, bookName, chapters, verses }) => {
         <div className="book">
             <h2 id={key}>{bookName}</h2>
             <form action="" className="book__form">
-                <label for={chapters}>Chapter:</label>
+                <label for={chapters}>:</label>
                     <select name={chapters} id={chapters}>
                         
                         console.log(chapters)
@@ -24,7 +24,7 @@ const Book = ({ key, bookName, chapters, verses }) => {
                             })
                         }
                     </select>
-                <label for={chapters}>Verse:</label>
+                <label for={chapters}></label>
                     <select name={chapters} id={chapters}>
                         
                         console.log(verses)

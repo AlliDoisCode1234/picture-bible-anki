@@ -1,0 +1,18 @@
+.userPictureBible {
+  display: flex;
+  width: 100%;
+}
+
+.userPictureBible__oldTestament {
+  display: flex;
+  width: 50%;
+  height: 53vh;
+  border: 1px solid black;
+  flex-flow: row wrap;
+}
+
+.userPictureBible__newTestament {
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+}

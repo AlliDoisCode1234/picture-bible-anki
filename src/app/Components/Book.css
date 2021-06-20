@@ -1,0 +1,10 @@
+.book {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1%;
+  height: 1vh;
+}
+
+.book > h2 {
+  font-size: 1rem;
+}
