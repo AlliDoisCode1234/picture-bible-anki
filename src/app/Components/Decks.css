@@ -4,4 +4,21 @@
   width: 20%;
   border: 1px solid pink;
   margin-top: 50px;
+  height: 100vh;
+  align-items: center;
+}
+
+.decks > h3 {
+  justify-content: center;
+  align-items: center;
+  color: #5d6c89;
+  font-weight: normal;
+  padding: 10% 0 7.5% 0;
+  font-size: 1.75rem;
+}
+
+.decks__decksListItem {
+  color: #5d6c89;
+  padding-top: 20%;
+  font-size: 1.3rem;
 }
