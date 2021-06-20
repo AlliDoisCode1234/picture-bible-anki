@@ -1,4 +1,5 @@
 import React from 'react'
+import Decks from './Decks'
 import './UserFeed.css'
 
 const UserFeed = () => {
@@ -15,6 +16,7 @@ const UserFeed = () => {
 
                 </div>
             </div>
+            <Decks />
         </div>
     )
 }
