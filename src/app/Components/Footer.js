@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="footer__menu">
                 <HomeIcon className="footer__menuItem" />
                 <SearchIcon className="footer__menuItem" />
-                <Link to='/create-post'>
+                <Link to='/createCard'>
                     <AddSharpIcon className="footer__menuItem" />
                 </Link>
                 <FavoriteBorderIcon className="footer__menuItem" />

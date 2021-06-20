@@ -2,12 +2,23 @@
   display: flex;
   justify-content: space-evenly;
   /* border-top: 1px solid gray; */
-  padding: 0.8% 0;
+  padding: 2% 0 1% 0;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: white;
-  color: black;
+  color: #abddd8;
   text-align: center;
+}
+
+.footer__menuItem {
+  color: #abddd8;
+  font-size: 10rem;
+}
+
+.footer__menuItem:hover {
+  background: #abddd8;
+  color: white;
+  font-size: 2.5rem;
 }
