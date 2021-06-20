@@ -1,32 +1,38 @@
 import React from 'react'
 import './Book.css'
 
-const Book = ({ bookName, chapters, verses }) => {
+const Book = ({ key, bookName, chapters, verses }) => {
     // const [chapter, setChapter] = useState();
     // const [verse, setVerse] = useState();
     // const [bookName, setBookName] = useState();
 
+  
+
     return (
         <div className="book">
-            <h2>{bookName}</h2>
+            <h2 id={key}>{bookName}</h2>
             <form action="" className="book__form">
                 <label for={chapters}>Chapter:</label>
                     <select name={chapters} id={chapters}>
-                        <option>1</option>
-                        {/* {
-                            chapters.map((item) => {
-                                return <option value={item}>{item}</option>
+                        
+                        console.log(chapters)
+                        
+                        
+                        {
+                            Object.entries(chapters).map((value) => {
+                                return <option value={value}>{value}</option>
                             })
-                        } */}
+                        }
                     </select>
                 <label for={chapters}>Verse:</label>
                     <select name={chapters} id={chapters}>
-                        <option>2</option>
-                        {/* {
-                            verses.map((item) => {
-                                return <option value={item}>{item}</option>
+                        
+                        console.log(verses)
+                        {
+                            Object.entries(verses).map((value) => {
+                                return <option value={value}>{value}</option>
                             })
-                        } */}
+                        }
                     </select>
             </form>
             
