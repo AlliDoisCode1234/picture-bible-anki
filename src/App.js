@@ -15,6 +15,7 @@ import UserProfile from './app/Components/UserProfile';
 import SalesLanding from './app/Components/SalesLanding';
 import Messages from './app/Components/Messages';
 import Decks from './app/Components/Decks';
+import Post from './app/Components/Post';
 
 
 function App() {
@@ -52,7 +53,11 @@ function App() {
       <div className="App">
         
         <Switch>
+          <Route path="/post">
+            <Post />
+          </Route>
           <Route path="/messages">
+            <Header />
             <Messages />
           </Route>
           <Route path="/decks">
@@ -60,6 +65,7 @@ function App() {
             <Decks />
           </Route>
           <Route path="/createCard">
+            <Header />
             <CreateCard />
           </Route>
           <Route path="/home">
