@@ -13,17 +13,21 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__menu">
-                <HomeIcon className="footer__menuItem" />
+                <Link to='/globalFeed'>
+                    <HomeIcon className="footer__menuItem" />
+                </Link>
                 <SearchIcon className="footer__menuItem" />
                 <Link to='/createCard'>
-                    <AddSharpIcon className="footer__menuItem" />
+                    <AddSharpIcon fontSize="30px" className="footer__menuItem" />
                 </Link>
                 <FavoriteBorderIcon className="footer__menuItem" />
-                <Avatar 
-                        className="footer__menuItem"
-                        alt="JosiahJames"
-                        src="/static/images/avatar/1/jpg"
-                />
+                <Link to='/userProfile'>
+                    <Avatar 
+                            className="footer__menuItem"
+                            alt="JosiahJames"
+                            src="/static/images/avatar/1/jpg"
+                    />
+                </Link>
             </div>
         </div>
     )

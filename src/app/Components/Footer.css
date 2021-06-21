@@ -15,10 +15,11 @@
 .footer__menuItem {
   color: #abddd8;
   font-size: 10rem;
+  transform: scale(1.5);
 }
 
 .footer__menuItem:hover {
   background: #abddd8;
   color: white;
-  font-size: 2.5rem;
+  transform: scale(2);
 }
