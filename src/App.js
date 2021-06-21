@@ -81,10 +81,6 @@ function App() {
 
 
           <Route path="/">
-            <UserProfile />
-
-
-
             {
               userName ? (
                 
@@ -93,6 +89,10 @@ function App() {
                 <button className="app__signIn" onClick={handleSignin}>Sign in</button>
               )
             }
+            <UserProfile />
+
+
+
             {
               userName ? (
                 <UserProfile />

@@ -1,3 +1,7 @@
+.footer {
+  background-color: transparent;
+  margin-top: 10%;
+}
 .footer__menu {
   display: flex;
   justify-content: space-evenly;
